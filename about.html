@@ -13,7 +13,100 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=leader1">
+<style>
+/* Leadership Card Styles */
+.story-sidebar {
+  position: sticky;
+  top: calc(var(--head) + 24px);
+  align-self: start;
+}
+.leader-card {
+  margin-top: 18px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(13, 74, 49, 0.08);
+  background: var(--paper-card);
+  position: relative;
+  transition: transform 0.35s var(--ease-spring), box-shadow 0.35s ease;
+}
+.leader-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 50px -6px rgba(13, 40, 28, 0.2), 0 0 0 1px rgba(13, 74, 49, 0.15);
+}
+.leader-img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  background: #f0f4ee;
+}
+.leader-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+.leader-caption {
+  padding: 14px 18px;
+  background: linear-gradient(135deg, var(--forest-dark), var(--forest));
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.leader-caption b {
+  font-size: 0.98rem;
+  color: #ffffff;
+  font-weight: 600;
+  display: block;
+}
+.leader-caption span {
+  font-size: 0.8rem;
+  color: #d7e8db;
+  font-weight: 500;
+}
+.leader-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: rgba(34, 197, 94, 0.2);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  border-radius: 999px;
+  font-size: 0.76rem;
+  color: var(--leaf-bright);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.leader-badge svg {
+  width: 0.9em;
+  height: 0.9em;
+}
+/* Navbar Link: No green background on click/active */
+.nav a.link,
+.nav a.link:hover,
+.nav a.link:focus,
+.nav a.link:active,
+.nav a.link[aria-current="page"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+.nav a.link[aria-current="page"] {
+  color: var(--forest) !important;
+  font-weight: 600 !important;
+}
+@media (max-width: 1080px) {
+  .story {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+  .story-sidebar {
+    position: static !important;
+  }
+}
+</style>
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
@@ -65,11 +158,29 @@
 
 <section class="pad">
   <div class="wrap story">
-    <h2 class="reveal">Where we come from</h2>
+    <div class="reveal story-sidebar">
+      <h2>Where we come from</h2>
+      <div class="leader-card">
+        <div class="leader-img-wrap">
+          <img src="assets/managing-director.jpg" alt="Managing Director — Sana Green Apparels" width="1024" height="682" loading="lazy">
+        </div>
+        <div class="leader-caption">
+          <div>
+            <b>Managing Director</b>
+            <span>Sana Green Apparels &middot; Salem</span>
+          </div>
+          <span class="leader-badge">
+            <svg class="icon fill" aria-hidden="true"><use href="#i-leaf"/></svg>
+            Leadership
+          </span>
+        </div>
+      </div>
+    </div>
     <div class="reveal">
       <p class="big">We started with a simple idea: clothing should be made well, billed properly and delivered when promised.</p>
       <p>Sana Green Apparels was registered in April 2025 as a partnership, and operates from a single principal place of business in Ammapet, Salem. The business is led by its managing partner, Nithyanatham Subramani, together with partner Perumal Anbalagan &mdash; both residents of Tamil Nadu.</p>
       <p>Salem has long been a textile town. We work within that tradition: choosing fabric carefully, keeping patterns consistent from sample to bulk, and treating each order &mdash; large or small &mdash; as a repeat customer in the making.</p>
+      <p>Our operations combine sustainable 10-step woven fabric processing (including grey inspection, singeing, enzymatic desizing, eco-scouring, stenter heat-setting, and sanforization for less than 3% shrinkage) with dedicated cut-and-sew apparel lines for T-shirts, polos, hoodies, track pants, uniforms, towels, and kidswear. We strictly focus on fabric processing and finished garment manufacturing, maintaining clarity and quality without unsubstantiated claims.</p>
       <p>The leaf in our logo is deliberate. We want to make clothing that is comfortable on people and considerate of the places it comes from.</p>
       <div class="partners">
         <div class="partner"><span class="mono">NS</span><div><b>Nithyanatham Subramani</b><span>Managing Partner</span></div></div>
@@ -141,11 +252,12 @@
     <div>
       <h4>Range</h4>
       <ul>
-        <li><a href="products.html">T-shirts &amp; polos</a></li>
-        <li><a href="products.html">Hoodies &amp; joggers</a></li>
-        <li><a href="products.html">Kidswear</a></li>
-        <li><a href="products.html">Uniform shirts</a></li>
-        <li><a href="products.html#custom">Custom orders</a></li>
+        <li><a href="products.html?category=tshirts">T-shirts &amp; Polos</a></li>
+        <li><a href="products.html?category=hoodies">Hoodies &amp; Joggers</a></li>
+        <li><a href="products.html?category=towels">Towels &amp; Woven Fabric</a></li>
+        <li><a href="products.html?category=kidswear">Kidswear &amp; Frocks</a></li>
+        <li><a href="products.html?category=uniforms">Uniform Shirts</a></li>
+        <li><a href="products.html?category=custom">Custom Orders</a></li>
       </ul>
     </div>
     <div>

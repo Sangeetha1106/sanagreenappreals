@@ -3,17 +3,166 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Products — Sana Green Apparels</title>
-<meta name="description" content="T-shirts, polo shirts, hoodies, joggers, kidswear and uniform shirts from Sana Green Apparels, Salem. Custom and bulk orders welcome.">
+<title>Product Categories &amp; Catalog — Sana Green Apparels</title>
+<meta name="description" content="Wholesale garment catalog from Sana Green Apparels, Salem: T-shirts, polo shirts, track pants, hoodies, uniforms, towels, kids frocks, net garments and joggers. Bulk and customized enquiries welcome.">
 <meta name="theme-color" content="#1f4d3a">
-<meta property="og:title" content="Products — Sana Green Apparels">
-<meta property="og:description" content="T-shirts, polo shirts, hoodies, joggers, kidswear and uniform shirts from Sana Green Apparels, Salem. Custom and bulk orders welcome.">
+<meta property="og:title" content="Product Categories &amp; Catalog — Sana Green Apparels">
+<meta property="og:description" content="Wholesale garment catalog from Sana Green Apparels, Salem: T-shirts, polo shirts, track pants, hoodies, uniforms, towels, kids frocks, net garments and joggers. Bulk and customized enquiries welcome.">
 <meta property="og:image" content="assets/logo.png">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=mobile1">
+<style>
+/* Products Page Header & Horizontal Banner Strip */
+.page-hero {
+  padding: clamp(48px, 6vw, 76px) 0 clamp(36px, 4vw, 52px) !important;
+}
+
+.page-hero h1 {
+  max-width: 22ch !important;
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem) !important;
+  margin-bottom: 18px !important;
+}
+
+.page-hero .lede {
+  max-width: 65ch !important;
+  margin-bottom: 24px !important;
+  font-size: 1.15rem !important;
+}
+
+.hero-stats-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-top: 24px !important;
+}
+
+.stat-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 16px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 999px !important;
+  font-size: 0.9rem !important;
+  color: var(--ink) !important;
+  box-shadow: var(--shadow-xs) !important;
+}
+
+.stat-pill svg {
+  color: var(--leaf) !important;
+  width: 1.1rem !important;
+  height: 1.1rem !important;
+}
+
+/* Horizontal Full-Width Product Banner Strip (Below Header) */
+.products-banner-strip {
+  margin-top: 40px !important;
+  margin-bottom: 44px !important;
+}
+
+.products-banner-box {
+  position: relative !important;
+  border-radius: var(--radius-lg) !important;
+  overflow: hidden !important;
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(13, 74, 49, 0.08) !important;
+  aspect-ratio: 21 / 7.5 !important;
+  max-height: 360px !important;
+  background: var(--forest-dark) !important;
+}
+
+.products-banner-box img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 55% !important;
+  display: block !important;
+}
+
+.products-banner-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(to top, rgba(7, 34, 22, 0.92) 0%, rgba(7, 34, 22, 0.4) 45%, transparent 100%) !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  padding: clamp(20px, 4vw, 36px) !important;
+}
+
+.banner-overlay-content {
+  max-width: 820px !important;
+  color: #ffffff !important;
+}
+
+.banner-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 5px 12px !important;
+  background: rgba(34, 197, 94, 0.25) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(34, 197, 94, 0.4) !important;
+  border-radius: 999px !important;
+  font-size: 0.8rem !important;
+  color: var(--leaf-bright) !important;
+  font-weight: 600 !important;
+  margin-bottom: 10px !important;
+}
+
+.banner-pill svg {
+  width: 1em !important;
+  height: 1em !important;
+}
+
+.banner-overlay-content h3 {
+  font-family: var(--serif) !important;
+  font-size: clamp(1.3rem, 2.4vw, 1.95rem) !important;
+  color: #ffffff !important;
+  margin: 0 0 8px !important;
+  line-height: 1.25 !important;
+}
+
+.banner-overlay-content p {
+  font-size: clamp(0.86rem, 1.3vw, 1rem) !important;
+  color: #d7e8db !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+/* Navbar Link: No green background on click, hover, active */
+.nav a.link,
+.nav a.link:hover,
+.nav a.link:focus,
+.nav a.link:active,
+.nav a.link[aria-current="page"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+.nav a.link[aria-current="page"] {
+  color: var(--forest) !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 768px) {
+  .products-banner-box {
+    aspect-ratio: 16 / 9 !important;
+    max-height: none !important;
+    border-radius: var(--radius) !important;
+  }
+  .products-banner-overlay {
+    padding: 16px !important;
+  }
+  .products-banner-strip {
+    margin-top: 24px !important;
+    margin-bottom: 28px !important;
+  }
+}
+</style>
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
@@ -40,6 +189,7 @@
 <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></symbol>
 <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
 <symbol id="i-needle" viewBox="0 0 24 24"><path d="M20 4L8 16"/><path d="M8 16c-2 2-4 1-4 4 3 0 2-2 4-4z"/><path d="M17 3.5l3.5 3.5"/></symbol>
+<symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></symbol>
 </svg>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
@@ -57,87 +207,392 @@
 <section class="page-hero">
   <div class="wrap">
     <div class="crumbs"><a href="index.html">Home</a> / Products</div>
-    <span class="eyebrow">Products</span>
-    <h1>Everyday wear, made to your <em class="accent">specification</em>.</h1>
-    <p class="lede">Browse our core styles. Sizes, colours, fabrics and branding are flexible &mdash; tell us what you need and we&rsquo;ll build the order around it.</p>
+    <span class="eyebrow">Product Catalog &amp; Categories</span>
+    <h1>Wholesale garments, engineered to your <em class="accent">bulk specification</em>.</h1>
+    <p class="lede">Browse our 12 complete garment categories below. As an apparel and woven fabric processing manufacturer in Salem, we customize fabric weight, GSM, dye shades, fit, and private labelling to your exact order requirements.</p>
+    
+    <div class="hero-stats-row">
+      <div class="stat-pill">
+        <svg class="icon fill" aria-hidden="true"><use href="#i-leaf"/></svg>
+        <span><b>12</b> Garment Categories</span>
+      </div>
+      <div class="stat-pill">
+        <svg class="icon" aria-hidden="true"><use href="#i-scissors"/></svg>
+        <span><b>Custom</b> GSM &amp; Specs</span>
+      </div>
+      <div class="stat-pill">
+        <svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>
+        <span><b>&lt;3%</b> Residual Shrinkage</span>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- FULL-WIDTH PRODUCT RANGE BANNER STRIP (Below Header, Not on Right Side) -->
+<div class="products-banner-strip wrap">
+  <div class="products-banner-box">
+    <img src="assets/products-banner.jpg" alt="Sana Green Apparels wholesale garments, woven fabrics, polo shirts, t-shirts, and towels" width="1600" height="600" loading="lazy">
+    <div class="products-banner-overlay">
+      <div class="banner-overlay-content">
+        <span class="banner-pill"><svg class="icon fill" aria-hidden="true"><use href="#i-leaf"/></svg> Salem &middot; Tamil Nadu</span>
+        <h3>From Eco-Friendly Woven Fabric to Finished Bulk Garments</h3>
+        <p>100% Combed Cotton Single Jersey &middot; Pique Polos &middot; Bio-Washed &middot; Custom Institutional Workwear</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <section class="pad">
   <div class="wrap">
-    <div class="filters" role="group" aria-label="Filter products">
-      <button class="chip" data-filter="all" aria-pressed="true">All styles</button>
-      <button class="chip" data-filter="adult" aria-pressed="false">Menswear &amp; unisex</button>
-      <button class="chip" data-filter="kids" aria-pressed="false">Kids</button>
-      <button class="chip" data-filter="uniform" aria-pressed="false">Uniforms</button>
+    <!-- Category Filter Chips -->
+    <div class="filters" role="group" aria-label="Filter products by category" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px">
+      <button class="chip" data-filter="all" aria-pressed="true">All Categories</button>
+      <button class="chip" data-filter="tshirts" aria-pressed="false">T-Shirts</button>
+      <button class="chip" data-filter="polo" aria-pressed="false">Polo T-Shirts</button>
+      <button class="chip" data-filter="track-pants" aria-pressed="false">Track Pants</button>
+      <button class="chip" data-filter="hoodies" aria-pressed="false">Hoodies</button>
+      <button class="chip" data-filter="uniforms" aria-pressed="false">Uniforms</button>
+      <button class="chip" data-filter="towels" aria-pressed="false">Towels</button>
+      <button class="chip" data-filter="kidswear" aria-pressed="false">Kids Wear</button>
+      <button class="chip" data-filter="kids-frocks" aria-pressed="false">Kids Frocks</button>
+      <button class="chip" data-filter="net-garments" aria-pressed="false">Net Garments</button>
+      <button class="chip" data-filter="short-tops" aria-pressed="false">Short Tops</button>
+      <button class="chip" data-filter="joggers" aria-pressed="false">Joggers</button>
+      <button class="chip" data-filter="custom" aria-pressed="false">Customised Garments</button>
     </div>
+
+    <!-- Product Grid Listing -->
     <div class="catalog">
-      <article class="item reveal" data-cat="adult">
-        <div class="ph"><img src="assets/tshirt.jpg" alt="Plain white round-neck T-shirt" loading="lazy" width="800" height="1000"></div>
-        <div class="cat">Casual</div>
-        <h3>Round-neck T-shirt</h3>
-        <p>A dependable everyday tee, suited to retail, events and promotional wear.</p>
-        <ul><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Sizes S to XXL on request</li><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Choice of colours and fabric weight</li><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Print-ready surface</li></ul>
-        <a class="btn ghost sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%3A%20Round-neck%20T-shirt" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire on WhatsApp</a>
+      <!-- 1. T-SHIRTS -->
+      <article class="item reveal" data-cat="tshirts">
+        <div class="ph"><img src="assets/tshirt.jpg" alt="Round-neck T-shirt" loading="lazy" width="800" height="1000"></div>
+        <div class="cat">T-Shirts &middot; Core Line</div>
+        <h3>Round-Neck &amp; Bio-Washed T-Shirts</h3>
+        <p>Soft, durable everyday t-shirts suited for retail brands, corporate merchandising, and promotional events.</p>
+        <ul style="margin-bottom:18px">
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Fabric:</b> 100% Combed Cotton Single Jersey (160&ndash;220 GSM)</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Colours:</b> Sage Green, Forest, White, Black, Navy, Melange &amp; custom shades</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Sizes:</b> S to XXL (Custom specs on order)</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Finishing:</b> Bio-washed enzyme finish for zero surface pill</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-detail" type="button" data-detail-trigger
+            data-title="Round-Neck &amp; Bio-Washed T-Shirts"
+            data-cat-name="T-Shirts"
+            data-img="assets/tshirt.jpg"
+            data-desc="Crafted with premium ring-spun combed cotton single jersey. Excellent colour fastness, smooth stitch surface for screen and digital printing."
+            data-fabric="100% Combed Cotton Single Jersey (180 GSM)"
+            data-colors="Sage Green, Deep Forest, White, Jet Black, Navy Blue, Melange Grey"
+            data-sizes="S, M, L, XL, XXL (Custom oversized fits available)"
+            data-moq="200 pcs per colour / style">View Details</button>
+          <a class="btn wa sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%20bulk%20orders%20for%3A%20Round-Neck%20T-Shirts" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire Now</a>
+        </div>
       </article>
-      <article class="item reveal" data-cat="adult">
-        <div class="ph"><img src="assets/polo.jpg" alt="Grey polo shirt" loading="lazy" width="800" height="1000"></div>
-        <div class="cat">Casual &amp; team</div>
-        <h3>Polo shirt</h3>
-        <p>Ribbed collar and cuffs with a neat two-button placket. Smart enough for the office, easy enough for the team.</p>
-        <ul><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Contrast collar options</li><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Chest logo placement on request</li><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Reinforced placket</li></ul>
-        <a class="btn ghost sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%3A%20Polo%20shirt" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire on WhatsApp</a>
+
+      <!-- 2. POLO T-SHIRTS -->
+      <article class="item reveal" data-cat="polo">
+        <div class="ph"><img src="assets/polo.jpg" alt="Polo shirt" loading="lazy" width="800" height="1000"></div>
+        <div class="cat">Polo T-Shirts &middot; Corporate &amp; Casual</div>
+        <h3>Honeycomb Pique Polo T-Shirts</h3>
+        <p>Ribbed collar and cuffs with clean hems and reinforced two-button placket. Engineered for corporate teamwear and schools.</p>
+        <ul style="margin-bottom:18px">
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Fabric:</b> 100% Cotton / Rich Cotton-Poly Pique (220&ndash;240 GSM)</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Colours:</b> Heather Grey, Royal Blue, Olive Green, White, Burgundy, Charcoal</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Sizes:</b> S to 3XL</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Options:</b> Contrast collar tipping, embroidery logo placement</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-detail" type="button" data-detail-trigger
+            data-title="Honeycomb Pique Polo T-Shirts"
+            data-cat-name="Polo T-Shirts"
+            data-img="assets/polo.jpg"
+            data-desc="High-density honeycomb pique knit designed for structured drape and long wash endurance. Heat-set collars prevent curling."
+            data-fabric="100% Cotton / 80-20 Rich Pique Knit (230 GSM)"
+            data-colors="Heather Grey, Royal Blue, Olive Green, White, Burgundy, Charcoal"
+            data-sizes="S, M, L, XL, XXL, 3XL"
+            data-moq="150 pcs per style">View Details</button>
+          <a class="btn wa sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%20bulk%20orders%20for%3A%20Polo%20T-Shirts" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire Now</a>
+        </div>
       </article>
-      <article class="item reveal" data-cat="adult">
-        <div class="ph"><img src="assets/hoodie.jpg" alt="Pink hoodie" loading="lazy" width="800" height="1000"></div>
-        <div class="cat">Winter</div>
-        <h3>Hoodie</h3>
-        <p>Soft-touch fleece with a lined hood, kangaroo pocket and ribbed hem and cuffs.</p>
-        <ul><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Drawcord hood</li><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Unisex fit</li><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Colour-matched trims</li></ul>
-        <a class="btn ghost sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%3A%20Hoodie" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire on WhatsApp</a>
+
+      <!-- 3. TRACK PANTS -->
+      <article class="item reveal" data-cat="track-pants">
+        <div class="ph"><img src="assets/track-pants.jpg" alt="Track pants" loading="lazy" width="800" height="1000"></div>
+        <div class="cat">Track Pants &middot; Activewear</div>
+        <h3>Active Four-Way Stretch Track Pants</h3>
+        <p>Athletic training pants with durable reinforced seam stitching, concealed side zip pockets, and elastic drawcord waistband.</p>
+        <ul style="margin-bottom:18px">
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Fabric:</b> Poly-Cotton Interlock with 4% Elastane (240 GSM)</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Colours:</b> Dark Olive, Navy Blue, Anthracite Grey, Jet Black</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Sizes:</b> M to 3XL</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Features:</b> Deep zip pockets, pre-shrunk anti-chafing finish</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-detail" type="button" data-detail-trigger
+            data-title="Active Four-Way Stretch Track Pants"
+            data-cat-name="Track Pants"
+            data-img="assets/track-pants.jpg"
+            data-desc="Built for athletic sports academies, gym brands, and casual training. Excellent recovery with low knee-bulging."
+            data-fabric="Poly-Cotton Interlock with 4% Elastane (240 GSM)"
+            data-colors="Dark Olive, Navy Blue, Anthracite Grey, Black"
+            data-sizes="M, L, XL, XXL, 3XL"
+            data-moq="200 pcs per style">View Details</button>
+          <a class="btn wa sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%20bulk%20orders%20for%3A%20Track%20Pants" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire Now</a>
+        </div>
       </article>
-      <article class="item reveal" data-cat="adult">
-        <div class="ph"><img src="assets/joggers.jpg" alt="Joggers in four colours" loading="lazy" width="800" height="1000"></div>
-        <div class="cat">Active</div>
-        <h3>Joggers</h3>
-        <p>Comfortable track pants with elastic drawcord waist and ribbed ankle cuffs.</p>
-        <ul><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Side pockets</li><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Relaxed tapered fit</li><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Pairs with tees and hoodies</li></ul>
-        <a class="btn ghost sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%3A%20Joggers" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire on WhatsApp</a>
+
+      <!-- 4. HOODIES -->
+      <article class="item reveal" data-cat="hoodies">
+        <div class="ph"><img src="assets/hoodie.jpg" alt="Hoodies" loading="lazy" width="800" height="1000"></div>
+        <div class="cat">Hoodies &middot; Winterwear</div>
+        <h3>Brushed-Inside Fleece Hoodies</h3>
+        <p>Heavyweight winter fleece with a double-lined hood, durable drawstrings, bartacked kangaroo pouch, and ribbed cuffs.</p>
+        <ul style="margin-bottom:18px">
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Fabric:</b> 100% Cotton Fleece with Brushed Lining (320 GSM)</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Colours:</b> Dusty Pink, Forest Green, Black, Heather Grey, Burgundy</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Sizes:</b> S to XXL (Unisex regular or relaxed fit)</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Details:</b> Heavy brass eyelets and flat-woven drawcords</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-detail" type="button" data-detail-trigger
+            data-title="Brushed-Inside Fleece Hoodies"
+            data-cat-name="Hoodies"
+            data-img="assets/hoodie.jpg"
+            data-desc="Ultra-soft combed cotton fleece with raised inner fibres for cold weather thermal retention. Stable surface for screen print or embroidery."
+            data-fabric="100% Cotton Fleece with Brushed Lining (320 GSM)"
+            data-colors="Dusty Pink, Forest Green, Black, Heather Grey, Burgundy"
+            data-sizes="S, M, L, XL, XXL"
+            data-moq="150 pcs per style">View Details</button>
+          <a class="btn wa sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%20bulk%20orders%20for%3A%20Hoodies" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire Now</a>
+        </div>
       </article>
-      <article class="item reveal" data-cat="kids">
-        <div class="ph"><img src="assets/kidswear.jpg" alt="Girl in blue striped top and trousers set" loading="lazy" width="800" height="1000"></div>
-        <div class="cat">Children</div>
-        <h3>Kidswear set</h3>
-        <p>Tee and shorts sets cut for movement, with soft necklines and no scratchy trims.</p>
-        <ul><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Gentle on skin</li><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Bright, wash-friendly colours</li><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Sizes by age group</li></ul>
-        <a class="btn ghost sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%3A%20Kidswear%20set" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire on WhatsApp</a>
+
+      <!-- 5. UNIFORMS -->
+      <article class="item reveal" data-cat="uniforms">
+        <div class="ph"><img src="assets/uniform-shirt.jpg" alt="Uniform shirts" loading="lazy" width="800" height="1000"></div>
+        <div class="cat">Uniforms &middot; Institutional</div>
+        <h3>Corporate &amp; School Uniform Shirts</h3>
+        <p>Crisp, durable, easy-care shirts with chest pockets &mdash; engineered for schools, hospitals, security, and corporate institutions.</p>
+        <ul style="margin-bottom:18px">
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Fabric:</b> 65/35 Poly-Viscose &amp; Cotton Twill blends (160&ndash;200 GSM)</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Colours:</b> Light Sky Blue, Crisp White, Khaki, Steel Grey, Navy</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Sizes:</b> 28 to 46 (Half / Full sleeve specs)</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Features:</b> High batch shade consistency and wrinkle-free finish</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-detail" type="button" data-detail-trigger
+            data-title="Corporate &amp; School Uniform Shirts"
+            data-cat-name="Uniforms"
+            data-img="assets/uniform-shirt.jpg"
+            data-desc="Manufactured from high-twist yarn woven fabrics. Resistant to daily commercial wash cycles with low pill and zero collar collapse."
+            data-fabric="65/35 Poly-Cotton &amp; Poly-Viscose Blends (180 GSM)"
+            data-colors="Light Sky Blue, White, Khaki, Grey, Navy"
+            data-sizes="Boys, Girls, Men, Women (Sizes 28 to 46)"
+            data-moq="250 pcs per batch">View Details</button>
+          <a class="btn wa sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%20bulk%20orders%20for%3A%20Uniforms" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire Now</a>
+        </div>
       </article>
-      <article class="item reveal" data-cat="uniform">
-        <div class="ph"><img src="assets/uniform-shirt.jpg" alt="Light blue formal shirt" loading="lazy" width="800" height="1000"></div>
-        <div class="cat">Institutional</div>
-        <h3>Uniform shirt</h3>
-        <p>Durable, easy-care shirts with a chest pocket &mdash; for schools, offices and institutions.</p>
-        <ul><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Pocket and collar styles</li><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Consistent shade across batches</li><li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg>Made for bulk supply</li></ul>
-        <a class="btn ghost sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%3A%20Uniform%20shirt" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire on WhatsApp</a>
+
+      <!-- 6. TOWELS -->
+      <article class="item reveal" data-cat="towels">
+        <div class="ph"><img src="assets/towels.jpg" alt="Towels" loading="lazy" width="800" height="1000"></div>
+        <div class="cat">Towels &middot; Home &amp; Hospitality</div>
+        <h3>Woven Organic Cotton Towels</h3>
+        <p>100% woven cotton waffle and terry towels designed for maximum water absorption, soft skin hand-feel, and commercial laundries.</p>
+        <ul style="margin-bottom:18px">
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Fabric:</b> 100% Ring-Spun Cotton Waffle &amp; Terry (450&ndash;600 GSM)</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Colours:</b> Sage Green, Terracotta, Ivory Cream, Muted Olive, Warm Stone</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Sizes:</b> Bath (70x140 cm), Hand (40x60 cm), Face (30x30 cm)</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Processing:</b> Bio-enzymatic scouring for maximum quick absorbency</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-detail" type="button" data-detail-trigger
+            data-title="Woven Organic Cotton Towels"
+            data-cat-name="Towels"
+            data-img="assets/towels.jpg"
+            data-desc="Woven with pure long-staple cotton yarn. Finished on compressive stenter machines for minimal border shrinkage after multiple washes."
+            data-fabric="100% Woven Ring-Spun Cotton (450 GSM)"
+            data-colors="Sage Green, Terracotta, Ivory Cream, Muted Olive"
+            data-sizes="Bath: 70 x 140 cm | Hand: 40 x 60 cm"
+            data-moq="300 pcs per batch">View Details</button>
+          <a class="btn wa sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%20bulk%20orders%20for%3A%20Towels" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire Now</a>
+        </div>
+      </article>
+
+      <!-- 7. KIDS WEAR -->
+      <article class="item reveal" data-cat="kidswear">
+        <div class="ph"><img src="assets/kidswear.jpg" alt="Kidswear set" loading="lazy" width="800" height="1000"></div>
+        <div class="cat">Kids Wear &middot; Playwear</div>
+        <h3>Everyday Pure Cotton Kidswear Sets</h3>
+        <p>Soft-touch tee and shorts combos tailored for freedom of movement, with gentle non-scratch necklines and wash-friendly hues.</p>
+        <ul style="margin-bottom:18px">
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Fabric:</b> 100% Bio-Washed Combed Cotton (160 GSM)</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Colours:</b> Sky Blue, Mint, Butter Yellow, Peach, Coral, Navy</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Sizes:</b> Age groups 1-2Y, 3-4Y, 5-6Y, 7-8Y, 9-10Y, 11-12Y</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Safety:</b> Oeko-Tex compliant non-toxic dyes and smooth seams</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-detail" type="button" data-detail-trigger
+            data-title="Everyday Pure Cotton Kidswear Sets"
+            data-cat-name="Kids Wear"
+            data-img="assets/kidswear.jpg"
+            data-desc="Durable children clothing cut for active movement. Tested for zero heavy metals, zero formaldehyde, and high colorfastness."
+            data-fabric="100% Bio-Washed Combed Cotton (160 GSM)"
+            data-colors="Sky Blue, Mint, Butter Yellow, Peach, Coral, Navy"
+            data-sizes="Ages 1 to 12 Years"
+            data-moq="250 sets per style">View Details</button>
+          <a class="btn wa sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%20bulk%20orders%20for%3A%20Kids%20Wear" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire Now</a>
+        </div>
+      </article>
+
+      <!-- 8. KIDS FROCKS -->
+      <article class="item reveal" data-cat="kids-frocks">
+        <div class="ph"><img src="assets/kids-frock.jpg" alt="Kids frock" loading="lazy" width="800" height="1000"></div>
+        <div class="cat">Kids Frocks &middot; Little Girls</div>
+        <h3>Pastel Cotton Tiered Kids Frocks</h3>
+        <p>Breathable pure cotton frocks in gentle pastel and vibrant palettes, styled with comfortable flutter sleeves and soft lace trims.</p>
+        <ul style="margin-bottom:18px">
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Fabric:</b> 100% Cotton Cambric &amp; Muslin (140 GSM)</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Colours:</b> Pastel Mint, Blush Pink, Peach, Sunshine Yellow, Soft Lilac</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Sizes:</b> Ages 2 to 11 Years</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Features:</b> Breathable airy weave with skin-safe dyes</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-detail" type="button" data-detail-trigger
+            data-title="Pastel Cotton Tiered Kids Frocks"
+            data-cat-name="Kids Frocks"
+            data-img="assets/kids-frock.jpg"
+            data-desc="Crafted from natural woven cambric and muslin cotton. Lightweight and non-sweat for warm climates, finished with gentle hems."
+            data-fabric="100% Cotton Cambric &amp; Muslin (140 GSM)"
+            data-colors="Pastel Mint, Blush Pink, Peach, Sunshine Yellow, Lilac"
+            data-sizes="Ages 2-3Y, 4-5Y, 6-7Y, 8-9Y, 10-11Y"
+            data-moq="200 pcs per style">View Details</button>
+          <a class="btn wa sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%20bulk%20orders%20for%3A%20Kids%20Frocks" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire Now</a>
+        </div>
+      </article>
+
+      <!-- 9. NET GARMENTS -->
+      <article class="item reveal" data-cat="net-garments">
+        <div class="ph"><img src="assets/net-garments.jpg" alt="Net garments" loading="lazy" width="800" height="1000"></div>
+        <div class="cat">Net Garments &middot; Sports Mesh</div>
+        <h3>High-Ventilation Athletic Net Jerseys</h3>
+        <p>Breathable micro-polyester eyelet mesh tops and net activewear designed for sports teams, training clubs, and workout apparel.</p>
+        <ul style="margin-bottom:18px">
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Fabric:</b> 100% Micro-Polyester Perforated Mesh (160 GSM)</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Colours:</b> Black, Royal Blue, Mint Green, Slate Grey, Dark Olive</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Sizes:</b> S to XXL</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Properties:</b> Rapid sweat evaporation and anti-static treatment</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-detail" type="button" data-detail-trigger
+            data-title="High-Ventilation Athletic Net Jerseys"
+            data-cat-name="Net Garments"
+            data-img="assets/net-garments.jpg"
+            data-desc="Precision micro-hole net knit that optimizes airflow while retaining fabric tensile strength. Smooth seam sewing prevents skin friction."
+            data-fabric="100% Micro-Polyester Mesh (160 GSM)"
+            data-colors="Black, Royal Blue, Mint Green, Slate Grey, Olive"
+            data-sizes="S, M, L, XL, XXL"
+            data-moq="250 pcs per style">View Details</button>
+          <a class="btn wa sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%20bulk%20orders%20for%3A%20Net%20Garments" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire Now</a>
+        </div>
+      </article>
+
+      <!-- 10. SHORT TOPS -->
+      <article class="item reveal" data-cat="short-tops">
+        <div class="ph"><img src="assets/short-tops.jpg" alt="Short tops" loading="lazy" width="800" height="1000"></div>
+        <div class="cat">Short Tops &middot; Contemporary</div>
+        <h3>Modern Rib-Knit &amp; Cropped Short Tops</h3>
+        <p>Versatile casual cropped t-shirts and ribbed cotton short tops for fashion retail buyers, streetwear brands, and summer collections.</p>
+        <ul style="margin-bottom:18px">
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Fabric:</b> 95% Combed Cotton 5% Spandex Rib Knit (190 GSM)</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Colours:</b> Sage Green, Terracotta, Natural Ivory, Jet Black, Muted Ochre</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Sizes:</b> XS, S, M, L, XL</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Fit:</b> Relaxed crop with clean twin-needle hem finishing</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-detail" type="button" data-detail-trigger
+            data-title="Modern Rib-Knit &amp; Cropped Short Tops"
+            data-cat-name="Short Tops"
+            data-img="assets/short-tops.jpg"
+            data-desc="Soft natural rib knit with gentle elasticity that maintains structure over frequent wearing. Pre-shrunk on sanforizer range."
+            data-fabric="95% Combed Cotton 5% Spandex Rib (190 GSM)"
+            data-colors="Sage Green, Terracotta Rust, Ivory, Jet Black"
+            data-sizes="XS, S, M, L, XL"
+            data-moq="200 pcs per style">View Details</button>
+          <a class="btn wa sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%20bulk%20orders%20for%3A%20Short%20Tops" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire Now</a>
+        </div>
+      </article>
+
+      <!-- 11. JOGGERS -->
+      <article class="item reveal" data-cat="joggers">
+        <div class="ph"><img src="assets/joggers.jpg" alt="Joggers" loading="lazy" width="800" height="1000"></div>
+        <div class="cat">Joggers &middot; Comfort &amp; Active</div>
+        <h3>Fleece Tapered Fit Joggers</h3>
+        <p>Premium fleece joggers with ribbed ankle cuffs, enclosed elastic drawcord waistband, and deep slant side pockets.</p>
+        <ul style="margin-bottom:18px">
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Fabric:</b> Cotton-Poly Terry Fleece (280&ndash;300 GSM)</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Colours:</b> Charcoal Melange, Black, Light Brown, Cream, Muted Khaki</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Sizes:</b> S to 3XL</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Finish:</b> Soft brushed interior with heavy-gauge drawcord</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-detail" type="button" data-detail-trigger
+            data-title="Fleece Tapered Fit Joggers"
+            data-cat-name="Joggers"
+            data-img="assets/joggers.jpg"
+            data-desc="Comfortable sweatpants built for lounges, gyms, and travel. Reinforced crotch stitching and heavy-gauge eyelets."
+            data-fabric="Cotton-Rich Terry Fleece (290 GSM)"
+            data-colors="Charcoal, Black, Brown, Cream, Khaki"
+            data-sizes="S, M, L, XL, XXL, 3XL"
+            data-moq="200 pcs per style">View Details</button>
+          <a class="btn wa sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20enquire%20about%20bulk%20orders%20for%3A%20Joggers" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire Now</a>
+        </div>
+      </article>
+
+      <!-- 12. CUSTOMISED GARMENTS -->
+      <article class="item reveal" data-cat="custom">
+        <div class="ph"><img src="assets/collection.jpg" alt="Customised garments" loading="lazy" width="800" height="1000"></div>
+        <div class="cat">Customised Garments &middot; Private Label</div>
+        <h3>Custom Buyer Patterns &amp; OEM Sourcing</h3>
+        <p>Full-package garment manufacturing from your tech pack, physical reference garment, or CAD specs with custom branding tags.</p>
+        <ul style="margin-bottom:18px">
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Fabrics:</b> Knits, wovens, blends, custom GSM and Pantone dyeing</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Branding:</b> Woven brand labels, satin wash care, heat-transfer tags</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Sampling:</b> Rapid physical counter-sample approval before cut</li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-check"/></svg><b>Billing:</b> 100% compliant regular GST invoicing</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-detail" type="button" data-detail-trigger
+            data-title="Custom Buyer Patterns &amp; OEM Sourcing"
+            data-cat-name="Customised Garments"
+            data-img="assets/collection.jpg"
+            data-desc="Tailored cut-and-sew production tailored to your brand sizing charts and custom embellishments. Transparent timelines directly with managing partners."
+            data-fabric="Custom Knits &amp; Woven Blends"
+            data-colors="Custom Pantone &amp; Buyer Swatch Match"
+            data-sizes="Custom Tech Pack Grading"
+            data-moq="Flexible batch sizes discussed directly">View Details</button>
+          <a class="btn wa sm" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20discuss%20a%20custom%20garment%20manufacturing%20order." target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire Now</a>
+        </div>
       </article>
     </div>
   </div>
 </section>
 
+<!-- CUSTOM ORDERS SECTION -->
 <section class="pad" id="custom" style="padding-top:0">
   <div class="wrap">
     <div class="custom reveal">
       <div class="txt">
-        <span class="eyebrow" style="color:var(--leaf-soft)">Custom orders</span>
-        <h2>Your design, your label, our stitching</h2>
-        <p style="color:#d6e5d9">Bring a sample garment, a sketch or just a reference photo. We&rsquo;ll match it as closely as the fabric allows.</p>
+        <span class="eyebrow" style="color:var(--leaf-soft)">Custom Orders &amp; Private Label</span>
+        <h2>Your design, your label, our stitching &amp; fabric care</h2>
+        <p style="color:#d6e5d9">Bring a sample garment, a technical sketch or a detailed buyer specification. We match fabric weight, dye tone, and stitch density precisely before bulk cutting.</p>
         <ul>
-          <li><svg class="icon " aria-hidden="true"><use href="#i-scissors"/></svg><span>Made-to-pattern styles from your sample or tech sketch</span></li>
-          <li><svg class="icon " aria-hidden="true"><use href="#i-layers"/></svg><span>Fabric and colour options discussed before sampling</span></li>
-          <li><svg class="icon " aria-hidden="true"><use href="#i-box"/></svg><span>Labels, tags and packing to suit your brand, on request</span></li>
-          <li><svg class="icon " aria-hidden="true"><use href="#i-truck"/></svg><span>Bulk quantities with a fixed delivery date</span></li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-scissors"/></svg><span>Made-to-pattern styles from your physical sample or CAD tech pack</span></li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-layers"/></svg><span>Sustainable fabric processing, eco-scouring and stenter stabilization</span></li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-box"/></svg><span>Labels, barcodes, tags and custom retail packaging to suit your brand</span></li>
+          <li><svg class="icon " aria-hidden="true"><use href="#i-truck"/></svg><span>Wholesale quantities with fixed dispatch schedules and verified GST billing</span></li>
         </ul>
-        <a class="btn wa" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20discuss%20a%20custom%20order." target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Discuss a custom order</a>
+        <a class="btn wa" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20discuss%20a%20custom%20order." target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Discuss a Custom Order</a>
       </div>
       <img src="assets/collection.jpg" alt="Selection of T-shirt, polo, hoodie and shirt styles" loading="lazy" width="1400" height="1000">
     </div>
@@ -145,11 +600,12 @@
 </section>
 
 </main>
+
 <footer class="site-footer">
   <div class="wrap foot-grid">
     <div class="foot-brand">
       <a href="index.html" aria-label="Sana Green Apparels — home"><img src="assets/logo.png" alt="Sana Green Apparels" width="719" height="819"></a>
-      <p>Everyday garments, made carefully in Salem, Tamil Nadu — for retailers, institutions and growing brands.</p>
+      <p>Sustainable woven fabric processing and bulk garment manufacturing in Salem, Tamil Nadu &mdash; serving retailers, brands, and institutions.</p>
     </div>
     <div>
       <h4>Explore</h4>
@@ -158,15 +614,16 @@
     <div>
       <h4>Range</h4>
       <ul>
-        <li><a href="products.html">T-shirts &amp; polos</a></li>
-        <li><a href="products.html">Hoodies &amp; joggers</a></li>
-        <li><a href="products.html">Kidswear</a></li>
-        <li><a href="products.html">Uniform shirts</a></li>
-        <li><a href="products.html#custom">Custom orders</a></li>
+        <li><a href="products.html?category=tshirts">T-shirts &amp; Polos</a></li>
+        <li><a href="products.html?category=hoodies">Hoodies &amp; Joggers</a></li>
+        <li><a href="products.html?category=towels">Towels &amp; Woven Fabric</a></li>
+        <li><a href="products.html?category=kidswear">Kidswear &amp; Frocks</a></li>
+        <li><a href="products.html?category=uniforms">Uniform Shirts</a></li>
+        <li><a href="products.html?category=custom">Custom Orders</a></li>
       </ul>
     </div>
     <div>
-      <h4>Visit &amp; talk</h4>
+      <h4>Visit &amp; Talk</h4>
       <ul class="foot-contact">
         <li><svg class="icon " aria-hidden="true"><use href="#i-pin"/></svg><span>108, Cuddalore Main Road, Ammapet,<br>Salem, Tamil Nadu 636003</span></li>
         <li><svg class="icon " aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+919150621506">+91 91506 21506</a></li>
@@ -181,12 +638,57 @@
   </div>
   <div class="wrap foot-bar">
     <span>&copy; <span id="year">2026</span> Sana Green Apparels. All rights reserved.</span>
-    <span>GSTIN <b>33AFNFS7412N1ZH</b></span>
+    <span>GSTIN <b>33AFNFS7412N1ZH</b> &middot; Regular Registration</span>
   </div>
 </footer>
+
 <a class="wa-float" href="https://wa.me/919150621506?text=Hello%20Sana%20Green%20Apparels%2C%20I%20would%20like%20to%20know%20more%20about%20your%20garments." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
   <svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg><span class="lbl">Chat with us on WhatsApp</span>
 </a>
+
+<!-- PRODUCT DETAILS MODAL -->
+<div class="product-modal-backdrop" id="product-modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="product-modal-dialog">
+    <button class="modal-close-btn" id="modal-close" aria-label="Close modal"><svg class="icon " aria-hidden="true"><use href="#i-x"/></svg></button>
+    <div class="modal-grid">
+      <div class="modal-img-wrap">
+        <img src="assets/collection.jpg" id="modal-img" alt="Product detail image" width="800" height="700">
+      </div>
+      <div class="modal-details">
+        <span class="modal-category-tag" id="modal-category">Garment Category</span>
+        <h2 id="modal-title">Product Name</h2>
+        <p class="modal-desc" id="modal-desc">Detailed manufacturing and tailoring overview.</p>
+        
+        <table class="specs-table">
+          <tbody>
+            <tr>
+              <th>Fabric &amp; Weight</th>
+              <td id="modal-fabric">100% Combed Cotton (180 GSM)</td>
+            </tr>
+            <tr>
+              <th>Available Colours</th>
+              <td id="modal-colors">Sage Green, Forest, White, Navy, Black</td>
+            </tr>
+            <tr>
+              <th>Size Range</th>
+              <td id="modal-sizes">S, M, L, XL, XXL, Custom Specs</td>
+            </tr>
+            <tr>
+              <th>Minimum Order</th>
+              <td id="modal-moq">Custom bulk batches on request</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="modal-actions">
+          <a class="btn wa" id="modal-wa-btn" href="#" target="_blank" rel="noopener"><svg class="icon fill" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire on WhatsApp</a>
+          <a class="btn ghost" id="modal-mail-btn" href="#"><svg class="icon " aria-hidden="true"><use href="#i-mail"/></svg> Email Enquiry</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="assets/main.js"></script>
 </body>
 </html>
